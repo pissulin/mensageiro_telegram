@@ -1,1 +1,1 @@
-python publish.py
+web: python publish.py
