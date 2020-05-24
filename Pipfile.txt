@@ -1,2 +1,0 @@
-web: python publish.py
-web: python subscrib.py
