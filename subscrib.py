@@ -32,6 +32,7 @@ def opcoes(msg):
         for i in tweetsCopy:
             bot.sendMessage(chat_id, i)
         tweets = []
+        tweetsCopy = []
     
 
 bot = telepot.Bot('1119773173:AAHDHl_fceEqq-ncu-m1ISRtqXPLZ_jajXQ') 
