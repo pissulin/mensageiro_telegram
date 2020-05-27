@@ -24,15 +24,16 @@ autenticacao.set_access_token(token_acesso, token_acesso_segredo)
 
 twitter = tweepy.API(autenticacao)
 
+while True:
+    resultados = twitter.search(q= 'bolsonaro')
+    for tweet in resultados:
+        st = f'Usuário: {tweet.user.screen_name} - Tweet: {tweet.text} - Localização: {tweet.user.location}'
 
-resultados = twitter.search(q= 'bolsonaro')
-for tweet in resultados:
-    st = f'Usuário: {tweet.user.screen_name} - Tweet: {tweet.text} - Localização: {tweet.user.location}'
-
-    payload = st.encode()
-    client.publish(TOPICO, payload, qos = 0)
-    print( payload.decode())
-    sleep(1)
+        payload = st.encode()
+        client.publish(TOPICO, payload, qos = 0)
+        print( payload.decode())
+        sleep(1)
+    sleep(60)
     
 
     
