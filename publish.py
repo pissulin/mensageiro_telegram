@@ -25,7 +25,7 @@ autenticacao.set_access_token(token_acesso, token_acesso_segredo)
 twitter = tweepy.API(autenticacao)
 
 
-resultados = twitter.search(q= 'VVAR3')
+resultados = twitter.search(q= 'bolsonaro')
 for tweet in resultados:
     st = f'Usuário: {tweet.user.screen_name} - Tweet: {tweet.text} - Localização: {tweet.user.location}'
 
