@@ -28,7 +28,7 @@ twitter = tweepy.API(autenticacao)
 while True:
     resultados = twitter.search(q= 'VVAR3')
     for tweet in resultados:
-        st = f'Usuário: {tweet.user.screen_name} - Tweet: {tweet.text}'
+        st = f'Usuário: {tweet.user.screen_name} - Tweet: {tweet.text} - Localização: {tweet.user.location}'
 
         payload = st.encode()
         client.publish(TOPICO, payload, qos = 0)
