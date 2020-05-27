@@ -33,9 +33,9 @@ while True:
         payload = st.encode()
         client.publish(TOPICO, payload, qos = 0)
         print( payload.decode())
-        sleep(5)
+        
     
 
-    sleep(15)
+    sleep(60)
 
 
