@@ -25,7 +25,7 @@ autenticacao.set_access_token(token_acesso, token_acesso_segredo)
 twitter = tweepy.API(autenticacao)
 
 while True:
-    resultados = twitter.search(q= 'bolsonaro')
+    resultados = twitter.search(q= 'ibovespa')
     for tweet in resultados[:10]:
         st = f'Usuário: {tweet.user.screen_name} - Tweet: {tweet.text} - Localização: {tweet.user.location}'
 
